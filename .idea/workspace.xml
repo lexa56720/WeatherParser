@@ -1,0 +1,112 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="9ff66aba-94f8-466f-a0be-4e6be23a454a" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/ApacheHttpClient.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/jackson_annotations_2_15_0.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/jackson_core_2_15_0.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/jackson_databind_2_15_0.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/jsoup_1_16_1.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/uiDesigner.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/WeatherParser.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/lib/jackson-annotations-2.15.0.jar" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/lib/jackson-core-2.15.0.jar" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/lib/jackson-databind-2.15.0.jar" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/lib/jsoup-1.16.1.jar" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/DataTypes/City/City.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/DataTypes/City/Coordinates.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/DataTypes/City/Country.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/DataTypes/City/District.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/DataTypes/City/Options.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/DataTypes/City/Root.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/DataTypes/City/Ru.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/DataTypes/City/Translations.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/DataTypes/CityInfo.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/DataTypes/WeatherInfo.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Main.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Parser/Parser.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Requester/SearchRequester.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Requester/WeatherRequester.java" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Class" />
+      </list>
+    </option>
+  </component>
+  <component name="MarkdownSettingsMigration">
+    <option name="stateVersion" value="1" />
+  </component>
+  <component name="ProjectId" id="2P9XQ5GokJJUB75tiqUN6RDGs32" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true">
+    <ConfirmationsSetting value="2" id="Add" />
+  </component>
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "RunOnceActivity.OpenProjectViewOnStart": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
+    "last_opened_file_path": "C:/Users/lexa0/source/JavaRepos/WeatherParser/lib/ApacheHttpClient",
+    "project.structure.last.edited": "Libraries",
+    "project.structure.proportion": "0.15",
+    "project.structure.side.proportion": "0.2"
+  }
+}]]></component>
+  <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\lexa0\source\JavaRepos\WeatherParser\lib" />
+    </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\lexa0\source\JavaRepos\WeatherParser\lib" />
+    </key>
+  </component>
+  <component name="RunManager">
+    <configuration name="Unnamed" type="Application" factoryName="Application" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="Main" />
+      <module name="WeatherParser" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="9ff66aba-94f8-466f-a0be-4e6be23a454a" name="Changes" comment="" />
+      <created>1682870256081</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1682870256081</updated>
+    </task>
+    <servers />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/Requester/SearchRequester.java</url>
+          <line>22</line>
+          <option name="timeStamp" value="24" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
+  </component>
+</project>
