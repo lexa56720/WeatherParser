@@ -4,37 +4,12 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="9ff66aba-94f8-466f-a0be-4e6be23a454a" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/ApacheHttpClient.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/jackson_annotations_2_15_0.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/jackson_core_2_15_0.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/jackson_databind_2_15_0.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/jsoup_1_16_1.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/uiDesigner.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/WeatherParser.iml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/lib/jackson-annotations-2.15.0.jar" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/lib/jackson-core-2.15.0.jar" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/lib/jackson-databind-2.15.0.jar" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/lib/jsoup-1.16.1.jar" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/DataTypes/City/City.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/DataTypes/City/Coordinates.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/DataTypes/City/Country.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/DataTypes/City/District.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/DataTypes/City/Options.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/DataTypes/City/Root.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/DataTypes/City/Ru.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/DataTypes/City/Translations.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/DataTypes/CityInfo.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/DataTypes/WeatherInfo.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Main.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Parser/Parser.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Requester/SearchRequester.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Requester/WeatherRequester.java" afterDir="false" />
+    <list default="true" id="9ff66aba-94f8-466f-a0be-4e6be23a454a" name="Changes" comment="City info parsing">
+      <change afterPath="$PROJECT_DIR$/src/DataTypes/WeatherState.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/DataTypes/WeatherInfo.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/DataTypes/WeatherInfo.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Main.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Requester/WeatherRequester.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Requester/WeatherRequester.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -59,17 +34,17 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "RunOnceActivity.OpenProjectViewOnStart": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
-    "last_opened_file_path": "C:/Users/lexa0/source/JavaRepos/WeatherParser/lib/ApacheHttpClient",
-    "project.structure.last.edited": "Libraries",
-    "project.structure.proportion": "0.15",
-    "project.structure.side.proportion": "0.2"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
+    &quot;last_opened_file_path&quot;: &quot;C:/Users/lexa0/source/JavaRepos/WeatherParser/lib/ApacheHttpClient&quot;,
+    &quot;project.structure.last.edited&quot;: &quot;Libraries&quot;,
+    &quot;project.structure.proportion&quot;: &quot;0.15&quot;,
+    &quot;project.structure.side.proportion&quot;: &quot;0.2&quot;
   }
-}]]></component>
+}</component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
       <recent name="C:\Users\lexa0\source\JavaRepos\WeatherParser\lib" />
@@ -96,17 +71,32 @@
       <option name="presentableId" value="Default" />
       <updated>1682870256081</updated>
     </task>
+    <task id="LOCAL-00001" summary="City info parsing">
+      <created>1682879236552</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1682879236552</updated>
+    </task>
+    <task id="LOCAL-00002" summary="City info parsing">
+      <created>1682879275003</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1682879275003</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
     <servers />
   </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="City info parsing" />
+    <option name="LAST_COMMIT_MESSAGE" value="City info parsing" />
+  </component>
   <component name="XDebuggerManager">
-    <breakpoint-manager>
-      <breakpoints>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/Requester/SearchRequester.java</url>
-          <line>22</line>
-          <option name="timeStamp" value="24" />
-        </line-breakpoint>
-      </breakpoints>
-    </breakpoint-manager>
+    <pin-to-top-manager>
+      <pinned-members>
+        <PinnedItemInfo parentTag="org.jsoup.nodes.Element" memberName="attributes" />
+      </pinned-members>
+    </pin-to-top-manager>
   </component>
 </project>

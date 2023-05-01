@@ -1,13 +1,6 @@
-import DataTypes.CityInfo;
-import Requester.SearchRequester;
-import org.jsoup.Jsoup;
-import org.jsoup.nodes.Document;
-import org.jsoup.nodes.Element;
-import org.jsoup.select.Elements;
 
-import java.io.*;
-import java.net.*;
-import java.net.http.HttpRequest;
+import Requester.SearchRequester;
+import Requester.WeatherRequester;
 
 public class Main
 {
@@ -15,7 +8,7 @@ public class Main
     {
         var cities=SearchRequester.GetResult("New");
         for(var city: cities)
-            System.out.println(city.GetFullLocation());
+            WeatherRequester.RequestWeather(city,10);
     }
 
 }
