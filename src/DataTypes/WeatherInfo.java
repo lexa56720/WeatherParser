@@ -5,19 +5,24 @@ import java.util.Date;
 
 public class WeatherInfo
 {
-    public WeatherInfo(CityInfo city, Date date,int[] temperature, int[] wind, float[] precipitation, int[] time)
-    {
 
+    private CityInfo City;
+    private WeatherState[] States;
+    public WeatherInfo(CityInfo city, Date date, int[] temperature, int[] wind, float[] precipitation, WeatherState.SkyState[] skyStates, int[] time)
+    {
+        City = city;
+        States=new WeatherState[time.length];
+        for(int i=0;i< time.length;i++)
+            States[i]=new WeatherState(temperature[i],wind[i],precipitation[i],date,skyStates[i],time[i]);
     }
 
-    public int GetWeatherState(int time)
+    public CityInfo GetCity()
     {
-        var index = Arrays.binarySearch(this.time, time);
-        return temperature[index];
+        return City;
     }
-    int[] GetTimes()
+    public WeatherState[] GetWeatherStates()
     {
-        return time;
+        return States;
     }
 
 }

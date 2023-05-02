@@ -1,79 +1,59 @@
 package Requester;
 
+import java.util.Calendar;
+import java.util.Date;
 import DataTypes.CityInfo;
 import DataTypes.WeatherInfo;
 import org.jsoup.Jsoup;
 import org.jsoup.nodes.Document;
-import org.jsoup.nodes.Node;
 
 import java.io.IOException;
-import java.util.List;
+import java.time.Duration;
+import java.util.Date;
+import java.util.stream.IntStream;
+
+import static Parser.Parser.*;
+import static Parser.Parser.GetPrecipitation;
 
 public class WeatherRequester
 {
     public static WeatherInfo[] RequestWeather(CityInfo city, int days)
     {
         var result = new WeatherInfo[days];
-        for (int day = 0; day < days; day++)
+
+        IntStream.range(0, days).parallel().forEach(day ->
         {
             var weatherPage = RequestPage(FormUrl(day, city.GetUrl()));
-            result[day] = ParsePage(weatherPage);
-        }
+            result[day] = ParsePage(weatherPage,city,day);
+        });
         return result;
     }
 
-    private static WeatherInfo ParsePage(Document doc)
+    private static WeatherInfo ParsePage(Document doc,CityInfo city, int day)
     {
         var temperature = GetTemperature(doc);
         var wind = GetWind(doc);
-        var precipitation=GetPrecipitation(doc);
-        return null;
+        var precipitation = GetPrecipitation(doc);
+        var skyState=GetSkyStates(doc);
+
+        var time = new int[]{1, 4, 7, 10, 13, 16, 19, 22};
+        var date=Date.from(GetDate().toInstant().plus(Duration.ofDays(day)));
+
+        return new WeatherInfo(city,date,temperature,wind,precipitation,skyState,time);
     }
 
-    private static int[] GetTemperature(Document document)
+    public static Date GetDate()
     {
-        var element = document.select("body > section.content.wrap" +
-                " > div.content-column.column1 > section:nth-child(3) >" +
-                " div.widget.widget-weather-parameters.widget-oneday >" +
-                " div > div > div:nth-child(4) > div > div");
-        var temperature = new int[element.first().childrenSize()];
-        for (int i = 0; i < temperature.length; i++)
-        {
-            temperature[i] = Integer.parseInt(element.first().child(i).child(0).text());
-        }
-        return temperature;
+        Calendar cal = Calendar.getInstance();
+        cal.setTime(new Date());
+        cal.set(Calendar.HOUR_OF_DAY, 0);
+        cal.set(Calendar.MINUTE, 0);
+        cal.set(Calendar.SECOND, 0);
+        cal.set(Calendar.MILLISECOND, 0);
+        return cal.getTime();
     }
 
-    private static int[] GetWind(Document document)
-    {
-        var element = document.select("div.widget-row.widget-row-wind-gust.row-with-caption");
-        var wind = new int[element.first().childrenSize() - 1];
 
-        for (int i = 0; i < wind.length; i++)
-        {
-            var node = element.first().child(i + 1);
-            if (node.childrenSize() > 1)
-                wind[i] = Integer.parseInt(node.child(1).text());
-            else
-                wind[i] = 0;
-        }
-        return wind;
-    }
-
-    private static float[] GetPrecipitation(Document document)
-    {
-
-        var element = document.select(  ".widget-row.widget-row-precipitation-bars.row-with-caption");
-        var precipitation = new float[element.first().childrenSize()-1];
-
-
-        for (int i = 0; i < precipitation.length; i++)
-        {
-            var node = element.first().child(i + 1);
-            precipitation[i] = Float.parseFloat(node.child(0).text().replace(',','.'));
-        }
-        return precipitation;
-    }
     private static String FormUrl(int day, String url)
     {
         switch (day)
@@ -83,7 +63,7 @@ public class WeatherRequester
             case 1:
                 return url + "tomorrow/";
             default:
-                return url + day + 1 + "-day/";
+                return url + (day + 1) + "-day/";
         }
     }
     private static Document RequestPage(String path)
