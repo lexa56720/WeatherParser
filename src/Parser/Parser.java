@@ -14,7 +14,9 @@ public class Parser
         var temperature = new int[element.first().childrenSize()];
         for (int i = 0; i < temperature.length; i++)
         {
-            temperature[i] = Integer.parseInt(element.first().child(i).child(0).text());
+            var node=element.first().child(i).child(0);
+            temperature[i] = Integer.parseInt(node.text().replace('−','-'));
+
         }
         return temperature;
     }

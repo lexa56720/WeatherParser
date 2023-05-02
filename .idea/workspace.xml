@@ -4,22 +4,23 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="9ff66aba-94f8-466f-a0be-4e6be23a454a" name="Changes" comment="Weather parsing">
-      <change afterPath="$PROJECT_DIR$/Resources/cloud.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Resources/raining.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Resources/sunny.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/UI/MainFrame.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/UI/SearchPanel.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/UI/WeatherComponent.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/UI/WeatherDetails.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/UI/WeatherFrame.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/UI/WeatherSummary.java" afterDir="false" />
+    <list default="true" id="9ff66aba-94f8-466f-a0be-4e6be23a454a" name="Changes" comment="Weather parsing completed&#10;UI prototyping">
+      <change afterPath="$PROJECT_DIR$/src/UI/SearchResult.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Utils/DateConverter.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Utils/Event.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Utils/IEventSubscriber.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Resources/cloud.png" beforeDir="false" afterPath="$PROJECT_DIR$/Resources/cloudy.png" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/DataTypes/WeatherInfo.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/DataTypes/WeatherInfo.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/DataTypes/WeatherState.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/DataTypes/WeatherState.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Main.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Parser/Parser.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Parser/Parser.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Requester/WeatherRequester.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Requester/WeatherRequester.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Requester/SearchRequester.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Requester/SearchRequester.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/UI/MainFrame.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/UI/MainFrame.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/UI/SearchPanel.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/UI/SearchPanel.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/UI/WeatherComponent.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/UI/WeatherComponent.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/UI/WeatherDetails.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/UI/WeatherDetails.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/UI/WeatherFrame.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/UI/WeatherFrame.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/UI/WeatherSummary.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/UI/WeatherSummary.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -49,7 +50,7 @@
     "RunOnceActivity.OpenProjectViewOnStart": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "SHARE_PROJECT_CONFIGURATION_FILES": "true",
-    "last_opened_file_path": "C:/Users/lexa0/source/JavaRepos/WeatherParser/Resources",
+    "last_opened_file_path": "C:/Users/lexa0/source/JavaRepos/WeatherParser/src",
     "project.structure.last.edited": "Libraries",
     "project.structure.proportion": "0.15",
     "project.structure.side.proportion": "0.2"
@@ -57,6 +58,7 @@
 }]]></component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\lexa0\source\JavaRepos\WeatherParser\src" />
       <recent name="C:\Users\lexa0\source\JavaRepos\WeatherParser\Resources" />
       <recent name="C:\Users\lexa0\source\JavaRepos\WeatherParser\lib" />
     </key>
@@ -104,13 +106,21 @@
       <option name="project" value="LOCAL" />
       <updated>1682946671138</updated>
     </task>
-    <option name="localTasksCounter" value="4" />
+    <task id="LOCAL-00004" summary="Weather parsing completed&#10;UI prototyping">
+      <created>1683018234568</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1683018234568</updated>
+    </task>
+    <option name="localTasksCounter" value="5" />
     <servers />
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="City info parsing" />
     <MESSAGE value="Weather parsing" />
-    <option name="LAST_COMMIT_MESSAGE" value="Weather parsing" />
+    <MESSAGE value="Weather parsing completed&#10;UI prototyping" />
+    <option name="LAST_COMMIT_MESSAGE" value="Weather parsing completed&#10;UI prototyping" />
   </component>
   <component name="XDebuggerManager">
     <pin-to-top-manager>

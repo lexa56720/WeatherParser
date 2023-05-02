@@ -34,6 +34,8 @@ public class SearchRequester
 
         var cities = response.split("\\{" + "\"source\"");
         var result = new String[cities.length - 1];
+        if(result.length==0)
+            return result;
         for (int i = 0; i < result.length; i++)
             result[i] = "{" + "\"source\"" + cities[i+1].substring(0, cities[i+1].length() - 1);
         result[result.length-1]=result[result.length-1].substring(0, result[result.length-1].length()-1);

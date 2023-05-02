@@ -1,5 +1,8 @@
 package UI;
 
+import DataTypes.CityInfo;
+import Utils.IEventSubscriber;
+
 import javax.swing.*;
 import java.awt.*;
 import java.awt.event.WindowAdapter;
@@ -22,6 +25,8 @@ public class MainFrame
         SetupSearch();
         SetupWeather();
 
+        Search.CitySelected.Subscribe((data, Sender) -> Weather.EventRaised(data,Sender));
+
         Frame.setSize(1000, 800);
     }
 
@@ -31,9 +36,9 @@ public class MainFrame
         c.gridx = 0;
         c.gridy = 0;
         c.fill = GridBagConstraints.BOTH;
-        c.weighty = 1;
         c.weightx = 0.35;
-        c.gridwidth = 1;
+        c.weighty = 1;
+        c.gridwidth =1;
         Frame.add(Search, c);
     }
 
