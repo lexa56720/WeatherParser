@@ -12,9 +12,6 @@ public class Main
         UIManager.setLookAndFeel(UIManager.getSystemLookAndFeelClassName());
 
         var mainFrame=new MainFrame();
-        //var cities = SearchRequester.GetResult("New");
-
-        //var weather = WeatherRequester.RequestWeather(cities[0], 10);
     }
 
 }

@@ -1,13 +1,13 @@
-package UI;
+package UI.Weather;
 
 import DataTypes.CityInfo;
 import DataTypes.WeatherInfo;
-import DataTypes.WeatherState;
 import Requester.WeatherRequester;
 import Utils.IEventSubscriber;
 
 import javax.swing.*;
 import java.awt.*;
+import java.util.concurrent.CompletableFuture;
 
 public class WeatherFrame extends JPanel implements IEventSubscriber<CityInfo>
 {
@@ -63,6 +63,9 @@ public class WeatherFrame extends JPanel implements IEventSubscriber<CityInfo>
     @Override public void EventRaised(CityInfo data, Object Sender)
     {
         var weather= WeatherRequester.RequestWeather(data,10);
-        Update(weather);
+        CompletableFuture.runAsync(() ->
+        {
+            Update(weather);
+        });
     }
 }

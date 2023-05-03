@@ -1,12 +1,10 @@
 package UI;
 
-import DataTypes.CityInfo;
-import Utils.IEventSubscriber;
+import UI.Search.SearchPanel;
+import UI.Weather.WeatherFrame;
 
 import javax.swing.*;
 import java.awt.*;
-import java.awt.event.WindowAdapter;
-import java.awt.event.WindowEvent;
 
 public class MainFrame
 {
@@ -36,7 +34,7 @@ public class MainFrame
         c.gridy = 0;
         c.insets=new Insets(5,5,5,5);
         c.fill = GridBagConstraints.BOTH;
-        c.weightx = 1;
+        c.weightx = 0.5;
         c.weighty = 1;
         c.gridwidth =1;
         Frame.add(Search, c);
@@ -50,7 +48,7 @@ public class MainFrame
         c.insets=new Insets(5,0,5,5);
         c.fill = GridBagConstraints.BOTH;
         c.weighty = 1;
-        c.weightx = 1;
+        c.weightx = 0.5;
         c.gridwidth = 1;
         Frame.add(Weather, c);
     }

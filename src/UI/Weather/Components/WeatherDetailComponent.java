@@ -1,11 +1,9 @@
-package UI;
+package UI.Weather.Components;
 
 import DataTypes.WeatherState;
 
 import javax.swing.*;
-import javax.swing.event.MouseInputListener;
 import java.awt.*;
-import java.awt.event.MouseEvent;
 
 import static Utils.DateConverter.GetTime;
 
@@ -31,7 +29,6 @@ public class WeatherDetailComponent extends JPanel
         add(CreateTextField(State.getTemperature()+"°"));
         add(CreateTextField(State.getWind()+" м/c"));
         add(new WaterComponent(State.getPrecipitation(),maxWaterLevel));
-        //add(CreateTextField(+"мм"));
     }
     private JTextField CreateTextField(String text)
     {

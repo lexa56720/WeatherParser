@@ -1,10 +1,5 @@
 package DataTypes;
 
-import UI.WeatherDetailComponent;
-
-import javax.swing.*;
-import java.awt.*;
-import java.util.Arrays;
 import java.util.Date;
 
 public class WeatherInfo
@@ -30,7 +25,6 @@ public class WeatherInfo
     {
         return States;
     }
-
 
     public WeatherState.SkyState GetSkyState()
     {

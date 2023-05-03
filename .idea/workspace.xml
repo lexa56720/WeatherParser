@@ -4,19 +4,19 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="9ff66aba-94f8-466f-a0be-4e6be23a454a" name="Changes" comment="Search and summary ui implemented">
-      <change afterPath="$PROJECT_DIR$/src/UI/ExtendedJTextField.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/UI/WaterComponent.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/UI/WeatherDetailComponent.java" afterDir="false" />
+    <list default="true" id="9ff66aba-94f8-466f-a0be-4e6be23a454a" name="Changes" comment="UI completed">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/DataTypes/WeatherInfo.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/DataTypes/WeatherInfo.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Main.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/UI/MainFrame.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/UI/MainFrame.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/UI/SearchPanel.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/UI/SearchPanel.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/UI/WeatherComponent.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/UI/WeatherComponent.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/UI/WeatherDetails.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/UI/WeatherDetails.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/UI/WeatherFrame.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/UI/WeatherFrame.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/UI/WeatherSummary.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/UI/WeatherSummary.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Utils/DateConverter.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Utils/DateConverter.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/UI/SearchPanel.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/UI/Search/SearchPanel.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/UI/SearchResult.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/UI/Search/SearchResult.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/UI/WaterComponent.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/UI/Weather/Components/WaterComponent.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/UI/WeatherComponent.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/UI/Weather/Components/WeatherComponent.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/UI/WeatherDetailComponent.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/UI/Weather/Components/WeatherDetailComponent.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/UI/WeatherDetails.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/UI/Weather/WeatherDetails.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/UI/WeatherFrame.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/UI/Weather/WeatherFrame.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/UI/WeatherSummary.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/UI/Weather/WeatherSummary.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -116,7 +116,14 @@
       <option name="project" value="LOCAL" />
       <updated>1683043011284</updated>
     </task>
-    <option name="localTasksCounter" value="6" />
+    <task id="LOCAL-00006" summary="UI completed">
+      <created>1683129214885</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1683129214885</updated>
+    </task>
+    <option name="localTasksCounter" value="7" />
     <servers />
   </component>
   <component name="VcsManagerConfiguration">
@@ -124,7 +131,8 @@
     <MESSAGE value="Weather parsing" />
     <MESSAGE value="Weather parsing completed&#10;UI prototyping" />
     <MESSAGE value="Search and summary ui implemented" />
-    <option name="LAST_COMMIT_MESSAGE" value="Search and summary ui implemented" />
+    <MESSAGE value="UI completed" />
+    <option name="LAST_COMMIT_MESSAGE" value="UI completed" />
   </component>
   <component name="XDebuggerManager">
     <pin-to-top-manager>

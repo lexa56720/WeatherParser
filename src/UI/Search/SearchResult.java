@@ -1,4 +1,4 @@
-package UI;
+package UI.Search;
 
 import DataTypes.CityInfo;
 import Utils.Event;

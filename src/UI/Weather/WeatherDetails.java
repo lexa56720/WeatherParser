@@ -1,7 +1,7 @@
-package UI;
+package UI.Weather;
 
 import DataTypes.WeatherInfo;
-import DataTypes.WeatherState;
+import UI.Weather.Components.WeatherDetailComponent;
 
 import javax.swing.*;
 import java.awt.*;

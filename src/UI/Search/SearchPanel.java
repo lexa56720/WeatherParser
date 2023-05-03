@@ -1,8 +1,7 @@
-package UI;
+package UI.Search;
 
 import DataTypes.CityInfo;
 import Requester.SearchRequester;
-import Requester.WeatherRequester;
 import Utils.Event;
 import Utils.IEventSubscriber;
 
@@ -10,11 +9,8 @@ import javax.swing.*;
 import javax.swing.event.DocumentEvent;
 import javax.swing.event.DocumentListener;
 import java.awt.*;
-import java.awt.event.ActionEvent;
-import java.awt.event.ActionListener;
-import java.awt.event.InputMethodEvent;
-import java.awt.event.InputMethodListener;
 import java.util.LinkedList;
+import java.util.concurrent.CompletableFuture;
 
 import static javax.swing.BorderFactory.createEmptyBorder;
 
@@ -95,8 +91,11 @@ public class SearchPanel extends JPanel implements IEventSubscriber<CityInfo>
         if (query.length() <= 1)
             return;
         Clear();
-        Add(SearchRequester.GetResult(query));
-        revalidate();
+        CompletableFuture.runAsync(() ->
+        {
+            Add(SearchRequester.GetResult(query));
+            revalidate();
+        });
     }
 
     private void Add(CityInfo[] cities)

@@ -1,4 +1,6 @@
-package UI;
+package UI.Weather.Components;
+
+import UI.ExtendedJTextField;
 
 import javax.swing.*;
 import java.awt.*;

@@ -1,14 +1,12 @@
-package UI;
+package UI.Weather;
 
 import DataTypes.WeatherInfo;
-import DataTypes.WeatherState;
+import UI.Weather.Components.WeatherComponent;
 import Utils.Event;
 import Utils.IEventSubscriber;
 
 import javax.swing.*;
-import javax.swing.event.MouseInputListener;
 import java.awt.*;
-import java.awt.event.MouseEvent;
 import java.util.LinkedList;
 
 import static javax.swing.BorderFactory.createEmptyBorder;

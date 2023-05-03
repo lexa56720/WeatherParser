@@ -1,6 +1,7 @@
-package UI;
+package UI.Weather.Components;
 
 import DataTypes.WeatherInfo;
+import UI.ExtendedJTextField;
 import Utils.DateConverter;
 import Utils.Event;
 
