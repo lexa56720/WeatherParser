@@ -36,7 +36,7 @@ public class WeatherSummary extends JPanel implements IEventSubscriber<WeatherIn
         add(scrollPane, BorderLayout.CENTER);
     }
 
-    public void Update(WeatherInfo infos[])
+    public void Update(WeatherInfo[] infos)
     {
         Clear();
         Add(infos);

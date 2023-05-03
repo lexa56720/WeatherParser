@@ -14,8 +14,7 @@ public class Event<U>
 
     public void UnSubscribe(IEventSubscriber<U> sub)
     {
-        if (Subscribers.contains(sub))
-            Subscribers.remove(sub);
+        Subscribers.remove(sub);
     }
 
     public void NotifyAll(U data,Object Sender)

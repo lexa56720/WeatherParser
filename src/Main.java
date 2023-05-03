@@ -1,6 +1,4 @@
 
-import Requester.SearchRequester;
-import Requester.WeatherRequester;
 import UI.MainFrame;
 
 import javax.swing.*;
