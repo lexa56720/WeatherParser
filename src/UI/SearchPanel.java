@@ -16,6 +16,8 @@ import java.awt.event.InputMethodEvent;
 import java.awt.event.InputMethodListener;
 import java.util.LinkedList;
 
+import static javax.swing.BorderFactory.createEmptyBorder;
+
 public class SearchPanel extends JPanel implements IEventSubscriber<CityInfo>
 {
 
@@ -27,7 +29,7 @@ public class SearchPanel extends JPanel implements IEventSubscriber<CityInfo>
     public SearchPanel()
     {
         super();
-        this.setLayout(new GridBagLayout());
+        setLayout(new GridBagLayout());
         SetupSearchField();
         SetupList();
         revalidate();
@@ -42,10 +44,6 @@ public class SearchPanel extends JPanel implements IEventSubscriber<CityInfo>
         grid.weighty = 1;
         grid.gridy = 0;
         grid.gridx = 0;
-        grid.insets.top = 5;
-        grid.insets.bottom = 5;
-        grid.insets.right = 5;
-        grid.insets.left = 5;
 
         grid.fill = GridBagConstraints.BOTH;
         return grid;
@@ -70,7 +68,6 @@ public class SearchPanel extends JPanel implements IEventSubscriber<CityInfo>
         SearchField.setFont(new Font(SearchField.getFont().getName(),Font.PLAIN, 18));
         var grid=GetGrid();
         grid.weighty=0.01;
-
         grid.anchor=GridBagConstraints.PAGE_START;
         grid.fill = GridBagConstraints.BOTH;
         add(SearchField,grid);
@@ -83,6 +80,10 @@ public class SearchPanel extends JPanel implements IEventSubscriber<CityInfo>
         var scrollPane = new JScrollPane(SearchList);
         scrollPane.setVerticalScrollBarPolicy(ScrollPaneConstants.VERTICAL_SCROLLBAR_ALWAYS);
         scrollPane.setHorizontalScrollBarPolicy(ScrollPaneConstants.HORIZONTAL_SCROLLBAR_ALWAYS);
+        scrollPane.setBorder(createEmptyBorder());
+        scrollPane.setOpaque(false);
+        scrollPane.getViewport().setOpaque(false);
+        scrollPane.getHorizontalScrollBar().setOpaque(false);
         var grid=GetGrid();
         grid.weighty=1;
         grid.gridy=1;

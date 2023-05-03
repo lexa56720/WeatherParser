@@ -1,5 +1,6 @@
 package Utils;
 
+import java.text.SimpleDateFormat;
 import java.util.Calendar;
 import java.util.Date;
 
@@ -55,5 +56,12 @@ public class DateConverter
         }
 
         return day+" "+month;
+    }
+
+    public static String GetTime(Date date)
+    {
+        String pattern = "H:mm";
+        SimpleDateFormat simpleDateFormat = new SimpleDateFormat(pattern);
+        return simpleDateFormat.format(date);
     }
 }

@@ -23,7 +23,7 @@ public class WeatherComponent extends JButton
         super();
         setLayout(new GridBagLayout());
         Info = info;
-        setBackground(Color.WHITE);
+
         SetupLayout();
         addMouseListener(new MouseAdapter()
         {
@@ -42,7 +42,7 @@ public class WeatherComponent extends JButton
 
     private JTextField CreateTextField(String text, Color color)
     {
-        var textField = new JTextField(text);
+        var textField = new ExtendedJTextField(text,18);
         textField.addMouseListener(new MouseInputListener()
         {
             @Override public void mouseClicked(MouseEvent e)
@@ -74,12 +74,6 @@ public class WeatherComponent extends JButton
                 HandleMouseEvent(e);
             }
         });
-        textField.setEditable(false);
-        textField.setBackground(color);
-        textField.setOpaque(false);
-        textField.setBorder(javax.swing.BorderFactory.createEmptyBorder());
-        textField.setHorizontalAlignment(SwingConstants.CENTER);
-        textField.setFont(new Font("Arial", Font.PLAIN, 15));
         return textField;
     }
     private void SetupLayout()
@@ -125,9 +119,9 @@ public class WeatherComponent extends JButton
             case Cloudy -> file = "cloudy.png";
             case Raining -> file = "raining.png";
         }
-        ImageIcon imageIcon = new ImageIcon("Resources/" + file); // load the image to a imageIcon
-        Image image = imageIcon.getImage(); // transform it
-        Image newimg = image.getScaledInstance(80, 80, java.awt.Image.SCALE_SMOOTH); // scale it the smooth way
+        ImageIcon imageIcon = new ImageIcon("Resources/" + file);
+        Image image = imageIcon.getImage();
+        Image newimg = image.getScaledInstance(80, 80, java.awt.Image.SCALE_SMOOTH);
         return new ImageIcon(newimg);
     }
     private GridBagConstraints GetGrid()

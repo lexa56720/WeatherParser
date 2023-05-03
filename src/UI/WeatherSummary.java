@@ -11,6 +11,8 @@ import java.awt.*;
 import java.awt.event.MouseEvent;
 import java.util.LinkedList;
 
+import static javax.swing.BorderFactory.createEmptyBorder;
+
 public class WeatherSummary extends JPanel implements IEventSubscriber<WeatherInfo>
 {
 
@@ -18,7 +20,7 @@ public class WeatherSummary extends JPanel implements IEventSubscriber<WeatherIn
     private LinkedList<WeatherComponent> WeatherDays = new LinkedList<>();
 
     private JPanel DayList = new JPanel();
-    ;
+
     public WeatherSummary()
     {
         super();
@@ -28,9 +30,12 @@ public class WeatherSummary extends JPanel implements IEventSubscriber<WeatherIn
         DayList.setLayout(new BoxLayout(DayList, BoxLayout.X_AXIS));
 
         var scrollPane = new JScrollPane(DayList);
+        scrollPane.setBorder(createEmptyBorder());
+        scrollPane.setOpaque(false);
+        scrollPane.setHorizontalScrollBarPolicy(ScrollPaneConstants.HORIZONTAL_SCROLLBAR_ALWAYS);
+        scrollPane.getViewport().setOpaque(false);
+        scrollPane.getHorizontalScrollBar().setOpaque(false);
         add(scrollPane, BorderLayout.CENTER);
-
-        setBackground(Color.YELLOW);
     }
 
     public void Update(WeatherInfo infos[])

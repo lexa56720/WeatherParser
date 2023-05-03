@@ -21,7 +21,6 @@ public class MainFrame
         Frame.setLayout(new GridBagLayout());
         Frame.setVisible(true);
         Frame.setDefaultCloseOperation(WindowConstants.EXIT_ON_CLOSE);
-
         SetupSearch();
         SetupWeather();
 
@@ -35,8 +34,9 @@ public class MainFrame
         var c = new GridBagConstraints();
         c.gridx = 0;
         c.gridy = 0;
+        c.insets=new Insets(5,5,5,5);
         c.fill = GridBagConstraints.BOTH;
-        c.weightx = 0.35;
+        c.weightx = 1;
         c.weighty = 1;
         c.gridwidth =1;
         Frame.add(Search, c);
@@ -47,6 +47,7 @@ public class MainFrame
         var c = new GridBagConstraints();
         c.gridx = 1;
         c.gridy = 0;
+        c.insets=new Insets(5,0,5,5);
         c.fill = GridBagConstraints.BOTH;
         c.weighty = 1;
         c.weightx = 1;

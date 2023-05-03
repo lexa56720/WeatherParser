@@ -12,12 +12,24 @@ public class WeatherDetails extends JPanel
     public WeatherDetails()
     {
         super();
-        setBackground(Color.RED);
+        setLayout(new BoxLayout(this,BoxLayout.X_AXIS));
     }
 
 
     public void Update(WeatherInfo info)
     {
+        removeAll();
+        var states=info.GetWeatherStates();
 
+        for(var state : states)
+        {
+            add(Box.createRigidArea(new Dimension(5, 0)));
+            add(new WeatherDetailComponent(state,info.GetMaxWater()));
+        }
+
+        revalidate();
     }
+
+
+
 }

@@ -1,5 +1,9 @@
 package DataTypes;
 
+import UI.WeatherDetailComponent;
+
+import javax.swing.*;
+import java.awt.*;
 import java.util.Arrays;
 import java.util.Date;
 
@@ -67,6 +71,15 @@ public class WeatherInfo
             if (state.getTemperature() < min)
                 min = state.getTemperature();
         return min;
+    }
+
+    public float GetMaxWater()
+    {
+        float max = 0;
+        for (var state : States)
+            if (state.getPrecipitation() > max)
+                max = state.getPrecipitation();
+        return max;
     }
 
     public java.util.Date GetDate()

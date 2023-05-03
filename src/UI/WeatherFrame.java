@@ -17,7 +17,6 @@ public class WeatherFrame extends JPanel implements IEventSubscriber<CityInfo>
     public WeatherFrame()
     {
         super();
-        this.setBackground(Color.blue);
         this.setLayout(new GridBagLayout());
 
         Summary.SelectedDayChanged.Subscribe((data, Sender) -> Details.Update(data));
@@ -33,7 +32,7 @@ public class WeatherFrame extends JPanel implements IEventSubscriber<CityInfo>
         c.gridx = 0;
         c.gridy = 0;
         c.fill = GridBagConstraints.BOTH;
-        c.weighty = 0.5;
+        c.weighty = 1;
         c.weightx = 1;
         c.gridwidth = 1;
         c.gridheight=1;
@@ -46,7 +45,7 @@ public class WeatherFrame extends JPanel implements IEventSubscriber<CityInfo>
         c.gridx = 0;
         c.gridy = 1;
         c.fill = GridBagConstraints.BOTH;
-        c.weighty = 1;
+        c.weighty = 0.5;
         c.weightx = 0;
         c.gridwidth = 1;
         c.gridheight=1;
